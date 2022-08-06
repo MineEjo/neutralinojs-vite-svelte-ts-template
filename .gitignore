@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# NodeJS
+node_modules/
+dist-ssr
+*.local
+
+# Editor directories and files
+my-app/.vscode/extensions.json
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Developer tools' files
+.lite_workspace.lua
+
+# Neutralinojs binaries and builds
+bin/
+dist/
+tmp/
+
+# Neutralinojs client (minified)
+neutralino.js
+
+# Neutralinojs related files
+.storage
