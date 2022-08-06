@@ -1,4 +1,8 @@
 import './app.css'
+
+/* Neutralinojs types (d.ts) */
+import '../public/neutralino'
+
 import App from './App.svelte'
 
 const app = new App({
@@ -14,17 +18,14 @@ const app = new App({
 // }
 
 function openDocs() {
-  // @ts-ignore
   Neutralino.os.open("https://neutralino.js.org/docs");
 }
 
 function openTutorial() {
-  // @ts-ignore
   Neutralino.os.open("https://www.youtube.com/watch?v=txDlNNsgSh8&list=PLvTbqpiPhQRb2xNQlwMs0uVV0IN8N-pKj");
 }
 
 function setTray() {
-  // @ts-ignore
   if(NL_MODE != "window") {
     console.log("INFO: Tray menu is only available in the window mode.");
     return;
@@ -37,41 +38,33 @@ function setTray() {
       {id: "QUIT", text: "Quit"}
     ]
   };
-  // @ts-ignore
+
   Neutralino.os.setTray(tray);
 }
 
 function onTrayMenuItemClicked(event) {
   switch(event.detail.id) {
     case "VERSION":
-      // @ts-ignore
       Neutralino.os.showMessageBox("Version information",
-        // @ts-ignore
         `Neutralinojs server: v${NL_VERSION} | Neutralinojs client: v${NL_CVERSION}`);
       break;
     case "QUIT":
-      // @ts-ignore
       Neutralino.app.exit();
       break;
   }
 }
 
 function onWindowClose() {
-  // @ts-ignore
   Neutralino.app.exit();
 }
 
-// @ts-ignore
 Neutralino.init();
 
-// @ts-ignore
 Neutralino.events.on("trayMenuItemClicked", onTrayMenuItemClicked);
-// @ts-ignore
 Neutralino.events.on("windowClose", onWindowClose);
 
-// @ts-ignore
 if(NL_OS != "Darwin") { // TODO: Fix https://github.com/neutralinojs/neutralinojs/issues/615
   setTray();
 }
 
-export default app
+export default app;

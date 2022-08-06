@@ -34,5 +34,8 @@ tmp/
 # Neutralinojs client (minified)
 neutralino.js
 
+# Neutralinojs client (types)
+neutralino.d.ts
+
 # Neutralinojs related files
 .storage
