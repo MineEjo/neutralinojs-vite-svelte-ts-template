@@ -15,6 +15,6 @@ $ npm install
 $ neu update # Adds required Neutralino.js components
 ```
 
-Typescript
-1. Download [neutralino.d.ts](https://github.com/neutralinojs/neutralino.js/releases)
-2. Place types in `/public/neutralino.d.ts`
+### TypeScript
+1. Download - [neutralino.d.ts](https://github.com/neutralinojs/neutralino.js/releases) (The downloaded version must match the `clientVersion` from `neutralino.config.json`);
+2. Place types in `/public/neutralino.d.ts` `(hint, if you can't find the folder: neutralino.js is in the public folder)`;
